@@ -1,5 +1,7 @@
 import { makeStyles } from "@mui/styles";
 
+const drawerWidth = "240px";
+
 // whenever want to directly return an value from an arrow function, just wrap it up in round brackets
 export default makeStyles((theme) => ({
   //theme special object which we have access to
@@ -18,6 +20,21 @@ export default makeStyles((theme) => ({
     [theme.breakpoints.up("sm")]: {
       //only show these styles on devices that are higher than 'sm' i.e not mobile devices
       display: "none",
+    },
+  },
+  drawer: {
+    [theme.breakpoints.up("sm")]: {
+      width: drawerWidth,
+      flexShrink: 0,
+    },
+  },
+  drawerPaper: {
+    width: drawerWidth,
+  },
+  linkButton: {
+    "&:hover": {
+      color: "white !important",
+      textDecoration: "none",
     },
   },
 }));
